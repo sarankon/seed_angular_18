@@ -13,3 +13,13 @@ html {
 body {
     
 }
+
+@font-face {
+    font-family: "Prompt";
+    src: local("Prompt"), url(./../public/fonts/prompt/Prompt-Regular.ttf) format("truetype");
+
+}
+
+* {
+    font-family: "Prompt", Arial, Helvetica, sans-serif;
+}
