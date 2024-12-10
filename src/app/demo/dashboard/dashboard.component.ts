@@ -5,7 +5,7 @@ import { Card } from 'primeng/card';
 import { Panel } from 'primeng/panel';
 
 @Component({
-  selector: 'app-dashboard',
+  selector: 'demo-dashboard',
   standalone: true,
   imports: [ButtonModule, Card, Panel],
   templateUrl: './dashboard.component.html',

@@ -16,7 +16,7 @@ ng generate module pages --routing
 ``` bash
 ng generate component pages/main --standalone false --prefix page
 ng generate component pages/main-alone --prefix page
-ng generate component pages/page-not-found --prefix page
+ng generate component pages/error/page-not-found --prefix page
 ```
 
 :page_with_curl: pages-routing.module.ts
@@ -24,7 +24,7 @@ ng generate component pages/page-not-found --prefix page
 const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'main-alone', loadComponent: ()=> import('./main-alone/main-alone.component').then(c => c.MainAloneComponent) },
-  { path: '**', loadComponent: ()=> import('./page-not-found/page-not-found.component').then(c => c.PageNotFoundComponent) },
+  { path: '**', loadComponent: ()=> import('./error/page-not-found/page-not-found.component').then(c => c.PageNotFoundComponent) },
 ];
 ```
 

@@ -7,13 +7,9 @@ export const routes: Routes = [
     // At Start (Temp)
     // { path: '', component: AppComponent}
 
-    // Demo, Please remove or comment when you not use
-    // { path: 'demo', component: DashboardComponent },
-    // Lazy Load
-    { path: 'demo', loadComponent: ()=> import('./demo/dashboard/dashboard.component').then(c => c.DashboardComponent) },
-    { path: '', redirectTo: 'demo', pathMatch: 'full'},
-
-    // Display 404
+    // Demo, Please remove or comment when you not use | Lazy Load
+    { path: '', redirectTo: 'demo', pathMatch: 'full'}, // Default
+    { path: 'demo', loadChildren: ()=> import('./demo/demo.module').then(m => m.DemoModule) }, // Lazy Load
 
     // In Your Project
     // { path: '', loadChildren: ()=> import('./pages/pages.module').then(m => m.PagesModule) },
