@@ -24,6 +24,7 @@ npm install eslint
 npm install --save-dev eslint-config-prettier
 ```
 
+### Initial ESLint
 ``` bash
 npx eslint --init
 
@@ -52,14 +53,26 @@ eslint, globals, @eslint/js, typescript-eslint
 npm warn idealTree Removing dependencies.eslint in favor of devDependencies.eslint
 ```
 
-``` json
-// .eslintrc
-{
-    "extends": ["prettier"],
-    "rules": {
-        // "indent": "error"
-    }
-}
+``` js
+// eslint.config.mjs
+import globals from "globals";
+import pluginJs from "@eslint/js";
+import tseslint from "typescript-eslint";
+import eslintConfigPrettier from "eslint-config-prettier";
+
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+    { files: ["**/*.{js,mjs,cjs,ts}"] },
+    { languageOptions: { globals: globals.browser } },
+    pluginJs.configs.recommended,
+    ...tseslint.configs.recommended,
+    {
+        rules: {
+            "@typescript-eslint/no-explicit-any": "warn",
+        },
+    },
+    eslintConfigPrettier,
+];
 ```
 
 ## Faker
