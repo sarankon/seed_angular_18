@@ -1,0 +1,13 @@
+{
+    "tabWidth": 4,
+    "semi": true,
+    "overrides": [
+        {
+            "files": "*.ts",
+            "options": {
+                "semi": false
+            }
+        }
+    ],
+    "plugins": ["prettier-plugin-tailwindcss"]
+}
