@@ -19,13 +19,13 @@ npx tailwindcss init
 ``` js 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+    content: [
+      "./src/**/*.{html,ts}",
+    ],
+    theme: {
+      extend: {},
+    },
+    plugins: []
 }
 ```
 
@@ -53,28 +53,28 @@ npm install primeicons
 
 :page_with_curl: app.config.ts
 ``` js
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core'
+import { provideRouter } from '@angular/router'
 
-import { routes } from './app.routes';
+import { routes } from './app.routes'
 
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { providePrimeNG } from 'primeng/config';
-import Aura from '@primeng/themes/aura';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
+import { providePrimeNG } from 'primeng/config'
+import Aura from '@primeng/themes/aura'
 
 export const appConfig: ApplicationConfig = {
-  providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }), 
-    provideRouter(routes),
-    provideAnimationsAsync(),
-    providePrimeNG({ 
-        ripple: true,
-        theme: {
-            preset: Aura,
-        }
-    })
-  ]
-};
+    providers: [
+      provideZoneChangeDetection({ eventCoalescing: true }), 
+      provideRouter(routes),
+      provideAnimationsAsync(),
+      providePrimeNG({ 
+          ripple: true,
+          theme: {
+              preset: Aura,
+          }
+      })
+    ]
+}
 ```
 
 :page_with_curl: tailwind.config.js
@@ -83,11 +83,11 @@ export const appConfig: ApplicationConfig = {
 module.exports = {
     // ...
     plugins: [require('tailwindcss-primeui')]
-};
+}
 ```
 
 :page_with_curl: styles.scss
 ``` css
 /* ... */
-@import "primeicons/primeicons.css";
+@import "primeicons/primeicons.css"
 ```

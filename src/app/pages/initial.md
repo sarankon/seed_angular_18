@@ -4,12 +4,12 @@ ng generate module pages --routing
 ```
 
 :page_with_curl: app.routes.ts
-``` js
-    export const routes: Routes = [
+``` ts
+export const routes: Routes = [
     // ... 
     // In Your Project
-    { path: 'page', loadChildren: ()=> import('./pages/pages.module').then(m => m.PagesModule) },
-];
+    { path: 'page', loadChildren: ()=> import('./pages/pages.module').then(m => m.PagesModule) }
+]
 ```
 
 # Generate Component (No Standalone)
@@ -19,10 +19,10 @@ ng generate component pages/error/page-not-found --prefix page
 ```
 
 :page_with_curl: pages-routing.module.ts
-``` js
+``` ts
 const routes: Routes = [
-  { path: 'main', component: MainComponent },
-  { path: '**', loadComponent: ()=> import('./error/page-not-found/page-not-found.component').then(c => c.PageNotFoundComponent) },
+    { path: 'main', component: MainComponent },
+    { path: '**', loadComponent: ()=> import('./error/page-not-found/page-not-found.component').then(c => c.PageNotFoundComponent) }
 ];
 ```
 

@@ -14,7 +14,7 @@ npm install --save-dev prettier-plugin-tailwindcss
 ``` json
 // .prettierrc
 {
-  "plugins": ["prettier-plugin-tailwindcss"]
+    "plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
 
