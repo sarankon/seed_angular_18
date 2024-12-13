@@ -18,7 +18,22 @@ npm install --save-dev prettier-plugin-tailwindcss
 }
 ```
 
-# Demo
+## ESLint
+``` bash
+npm install eslint
+npm install --save-dev eslint-config-prettier
+```
+
+``` json
+// .eslintrc
+{
+    "extends": ["prettier"],
+    "rules": {
+        // "indent": "error"
+    }
+}
+```
+
 ## Faker
 Reference: https://fakerjs.dev/
 
