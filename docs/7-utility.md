@@ -24,6 +24,34 @@ npm install eslint
 npm install --save-dev eslint-config-prettier
 ```
 
+``` bash
+npx eslint --init
+
+You can also run this command directly using 'npm init @eslint/config@latest'.
+Need to install the following packages:
+@eslint/create-config@1.4.0
+Ok to proceed? (y)
+
+
+> angular18seed@0.0.0 npx
+> create-config
+
+@eslint/create-config: v1.4.0
+
+√ How would you like to use ESLint? · problems    
+√ What type of modules does your project use? · esm
+√ Which framework does your project use? · none
+√ Does your project use TypeScript? · typescript
+√ Where does your code run? · browser
+The config that you've selected requires the following dependencies:
+
+eslint, globals, @eslint/js, typescript-eslint
+√ Would you like to install them now? · No / Yes
+√ Which package manager do you want to use? · npm
+☕️Installing...
+npm warn idealTree Removing dependencies.eslint in favor of devDependencies.eslint
+```
+
 ``` json
 // .eslintrc
 {
