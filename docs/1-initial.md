@@ -1,6 +1,6 @@
 # Initial Project
 ``` bash
-npm install -g @angular/cli@18
+npm install -global @angular/cli@18
 ng new angular18seed
 ```
 
@@ -11,7 +11,7 @@ ng new angular18seed
 ## Install Tailwind CSS
 Reference: https://tailwindcss.com/docs/guides/angular
 ``` bash
-npm install -D tailwindcss postcss autoprefixer
+npm install --save-dev tailwindcss postcss autoprefixer
 npx tailwindcss init
 ```
 

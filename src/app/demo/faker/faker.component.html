@@ -1,0 +1,29 @@
+<div>Faker</div>
+<div>Reference: https://fakerjs.dev</div>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>UUID</th>
+                <th>Username</th>
+                <th>Full Name</th>
+                <th>Status</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (data of dataList; track data.id; let index = $index) {
+            <tr>
+                <td>{{ index }}</td>
+                <td>{{ data.id }}</td>
+                <td>{{ data.username }}</td>
+                <td>{{ data.fullName }}</td>
+                <td>{{ data.status }}</td>
+                <td>{{ data.phone }}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
