@@ -7,6 +7,6 @@ npm install
 
 # Start Project
 ``` bash
-npm install -g @angular/cli@18
+npm install -global @angular/cli@18
 npm run start
 ```

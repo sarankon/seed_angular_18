@@ -7,7 +7,9 @@
         "start-serve": "ng serve --host 0.0.0.0 --disable-host-check",
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
-        "test": "ng test"
+        "test": "ng test",
+        "api-gen": "openapi-generator-cli generate -i http://localhost:3000/swagger-json.json -g typescript-angular -o ./src/app/openapi",
+        "openapi-generate": "openapi-generator-cli generate -i http://localhost:3000/swagger-json.json -g typescript-angular -o ./src/app/openapi --additional-properties=ngVersion=18.2.13,npmName=restClient,supportsES6=true,npmVersion=10.8.2,withInterfaces=true"
     },
     "private": true,
     "dependencies": {
