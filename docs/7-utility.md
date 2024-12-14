@@ -47,7 +47,7 @@ Ok to proceed? (y)
 The config that you've selected requires the following dependencies:
 
 eslint, globals, @eslint/js, typescript-eslint
-√ Would you like to install them now? · No / Yes
+√ Would you like to install them now? · Yes
 √ Which package manager do you want to use? · npm
 ☕️Installing...
 npm warn idealTree Removing dependencies.eslint in favor of devDependencies.eslint
