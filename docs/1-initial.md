@@ -8,6 +8,14 @@ ng new angular18seed
 [https://sass-lang.com/documentation/syntax#scss]
 - Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? ___No___
 
+
+## Matrial Symbols
+Reference: https://github.com/marella/material-symbols
+Reference: https://marella.me/material-symbols/demo
+``` bash
+npm install material-symbols
+```
+
 ## Install Tailwind CSS
 Reference: https://tailwindcss.com/docs/guides/angular
 ``` bash
