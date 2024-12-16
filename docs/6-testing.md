@@ -13,17 +13,16 @@ npx openapi-generator-cli version-manager set <versionTags...>
 // package.json
 "scripts": {
     // ...
-    "api-gen": "openapi-generator-cli generate -i http://localhost:3000/swagger-json -g typescript-angular -o ./src/api",
-    "openapi-generate": "openapi-generator-cli generate -i http://localhost:3000/swagger-json -g typescript-angular -o ./src/app/api --additional-properties=ngVersion=18.2.13,npmName=restClient,supportsES6=true,npmVersion=10.8.2,withInterfaces=true"
+    "generate-api": "openapi-generator-cli generate -i http://localhost:3000/swagger-json -g typescript-angular -o ./src/api --additional-properties=ngVersion=18.2.13,npmName=restClient,supportsES6=true,npmVersion=10.8.2,withInterfaces=true"
     // ...
 }
 ```
 
 
 ``` bash
-openapi-generator-cli generate --input-spec docs/openapi.json --generator-name typescript-angular --output ./src/app/openapi
+openapi-generator-cli generate --input-spec docs/openapi.json --generator-name typescript-angular --output ./src/openapi
 ```
 
 ``` bash
-openapi-generator-cli generate --input-spec docs/openapi.json --generator-name typescript-angular --output ./src/app/openapi --additional-properties=ngVersion=18.2.12,npmName=restClient,supportsES6=true,npmVersion=10.8.2,withInterfaces=true
+openapi-generator-cli generate --input-spec docs/openapi.json --generator-name typescript-angular --output ./src/openapi --additional-properties=ngVersion=18.2.12,npmName=restClient,supportsES6=true,npmVersion=10.8.2,withInterfaces=true
 ``` 
