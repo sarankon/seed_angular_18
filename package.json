@@ -8,7 +8,7 @@
         "build": "ng build",
         "watch": "ng build --watch --configuration development",
         "test": "ng test",
-        "generate-api": "openapi-generator-cli generate --input-spec http://localhost:3000/swagger-json --generator-name typescript-angular --output ./src/api --additional-properties=ngVersion=18.2.13,npmName=restClient,supportsES6=true,npmVersion=10.8.2,withInterfaces=true"
+        "generate-api": "openapi-generator-cli generate --input-spec http://localhost:3000/swagger-json --generator-name typescript-angular --output ./src/api --config ./openapi-generator.config.json"
     },
     "private": true,
     "dependencies": {

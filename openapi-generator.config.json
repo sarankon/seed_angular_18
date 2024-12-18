@@ -1,0 +1,8 @@
+{
+    "npmName": "restClient",
+    "npmVersion": "10.8.2",
+    "ngVersion": "18.2.13",
+    "supportsES6": true,
+    "withInterfaces": true,
+    "fileNaming": "kebab-case"
+}
