@@ -1,8 +1,7 @@
-
-.textLabel {
-    @apply w-[200px];
+.inputText {
+    @apply w-[200px] rounded border p-1;
 }
 
-.inputText {
-    @apply border rounded p-1 w-[200px];
+.btn {
+    @apply rounded border bg-emerald-800 px-4 py-1 text-white;
 }

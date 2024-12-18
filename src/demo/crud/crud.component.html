@@ -1,34 +1,45 @@
-<div>
+<div class="container mx-auto pt-8">
+    <div class="text-xl">Demo Create Read Update Delete (CRUD)</div>
+    <hr />
     <div>Form Section</div>
-    <div>
-        <form [formGroup]="crudForm" (ngSubmit)="onSubmit()">
-            <div>
+    <div class="mt-8 w-6/12">
+        <form [formGroup]="crudForm" (ngSubmit)="onSubmit()" class="flex w-6/12 flex-col gap-4">
+            <div class="flex items-center justify-between pl-8">
                 <label for="topic">Topic</label>
                 <input type="text" id="topic" name="topic" class="inputText" formControlName="topic" />
             </div>
-            <div>
+            <div class="flex items-center justify-between pl-8">
                 <label for="detail">Details</label>
                 <input type="text" id="detail" name="detail" class="inputText" formControlName="detail" />
             </div>
-            <div>
-                <button type="submit">Send</button>
+            <div class="flex justify-end">
+                <button type="submit" class="btn">Send</button>
             </div>
         </form>
     </div>
+    <hr />
     <div>List Section</div>
-    <div>
-        <table>
+    <div class="mt-8 w-6/12">
+        <table class="table w-full">
             <thead>
                 <tr>
-                    <th></th>
+                    <th class="w-3/12">#</th>
+                    <th class="w-3/12">Topic</th>
+                    <th class="w-3/12">Detail</th>
+                    <th class="w-3/12">Action</th>
                 </tr>
             </thead>
             <tbody>
-                @for(crud of crudList; track $index) {
-                <tr>
-                    <td>{{ crud.topic }}</td>
-                    <td>{{ crud.detail }}</td>
-                </tr>
+                @for (crud of crudList; track $index) {
+                    <tr>
+                        <td>{{ $index + 1 }}</td>
+                        <td>{{ crud.topic }}</td>
+                        <td>{{ crud.detail }}</td>
+                        <td class="text-center">
+                            <button class="btn" (click)="onSelect(crud.id)">Edit</button>
+                            <button class="btn" (click)="onDelete(crud.id)">Remove</button>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
