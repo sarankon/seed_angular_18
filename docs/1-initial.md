@@ -2,6 +2,7 @@
 ``` bash
 npm install -global @angular/cli@18
 ng new angular18seed
+ng generate environments
 ```
 
 - Which stylesheet format would you like to use? Sass (SCSS) <br/>
