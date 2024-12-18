@@ -105,11 +105,26 @@ export class CrudComponent implements OnInit {
         console.log(`onSelect(${id})`)
 
         this.selecteCrudId = id
-        const data = this.crudList.find((crud) => crud.id == id)
+        // const data = this.crudList.find((crud) => crud.id == id)
 
-        this.crudForm.setValue({
-            topic: data?.topic ?? '',
-            detail: data?.detail ?? '',
+        // this.crudForm.setValue({
+        //     topic: data?.topic ?? '',
+        //     detail: data?.detail ?? '',
+        // })
+
+        this.crudService.findOneCrud(id.toString()).subscribe({
+            next: (response) => {
+                console.log('Response:')
+                console.log(response)
+
+                if (response.statusCode === 200) {
+                    const crud = response.data as UpdateCrudDto
+                    this.crudForm.setValue({
+                        topic: crud?.topic ?? '',
+                        detail: crud?.topic ?? '',
+                    })
+                }
+            },
         })
     }
 
@@ -123,6 +138,7 @@ export class CrudComponent implements OnInit {
 
                 if (response.statusCode === 200) {
                     this.loadCrud()
+                    this.resetForm()
                 }
             },
         })
