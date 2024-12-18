@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { DemoRoutingModule } from './demo-routing.module';
 import { DashboardNormalComponent } from './dashboard-normal/dashboard-normal.component';
+import { ApiModule } from './api/api.module';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DashboardNormalComponent } from './dashboard-normal/dashboard-normal.co
   ],
   imports: [
     CommonModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    ApiModule
   ]
 })
 export class DemoModule { }

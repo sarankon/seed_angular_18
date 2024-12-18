@@ -3,9 +3,17 @@
     "semi": true,
     "overrides": [
         {
+            "files": "*.html",
+            "options": {
+                "semi": false,
+                "printWidth": 180
+            }
+        },
+        {
             "files": "*.ts",
             "options": {
-                "semi": false
+                "semi": false,
+                "printWidth": 180
             }
         },{
             "files": "*.module.ts",

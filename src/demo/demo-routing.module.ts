@@ -14,12 +14,15 @@ const routes: Routes = [
   { path: 'lazy', loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule) },
 
   // Faker
-  { path: 'faker', loadComponent: ()=> import('./faker/faker.component').then(c => c.FakerComponent) }
+  { path: 'faker', loadComponent: ()=> import('./faker/faker.component').then(c => c.FakerComponent) },
+
+  // CRUD
+  { path: 'crud', loadComponent: ()=> import('./crud/crud.component').then(c => c.CrudComponent) }
 ]
 
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class DemoRoutingModule { }

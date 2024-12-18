@@ -1,0 +1,36 @@
+<div>
+    <div>Form Section</div>
+    <div>
+        <form [formGroup]="crudForm" (ngSubmit)="onSubmit()">
+            <div>
+                <label for="topic">Topic</label>
+                <input type="text" id="topic" name="topic" class="inputText" formControlName="topic" />
+            </div>
+            <div>
+                <label for="detail">Details</label>
+                <input type="text" id="detail" name="detail" class="inputText" formControlName="detail" />
+            </div>
+            <div>
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+    <div>List Section</div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @for(crud of crudList; track $index) {
+                <tr>
+                    <td>{{ crud.topic }}</td>
+                    <td>{{ crud.detail }}</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
