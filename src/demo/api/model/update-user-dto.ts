@@ -9,9 +9,12 @@
  */
 
 
-export interface UpdateCrudDto { 
-    id?: number;
-    topic?: string;
-    detail?: string;
+export interface UpdateUserDto { 
+    username?: string;
+    password?: string;
+    firstName?: string;
+    lastName?: string;
+    email?: string;
+    phone?: string;
 }
 

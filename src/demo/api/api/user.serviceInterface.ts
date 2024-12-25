@@ -11,51 +11,51 @@ import { HttpHeaders }                                       from '@angular/comm
 
 import { Observable }                                        from 'rxjs';
 
-import { CreateCrudDto } from '../model/models';
-import { UpdateCrudDto } from '../model/models';
+import { CreateUserDto } from '../model/models';
+import { UpdateUserDto } from '../model/models';
 
 
 import { Configuration }                                     from '../configuration';
 
 
 
-export interface CrudServiceInterface {
+export interface UserServiceInterface {
     defaultHeaders: HttpHeaders;
     configuration: Configuration;
 
     /**
      * 
      * 
-     * @param createCrudDto 
+     * @param createUserDto 
      */
-    createCrud(createCrudDto: CreateCrudDto, extraHttpRequestParams?: any): Observable<object>;
+    createUser(createUserDto: CreateUserDto, extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
      * 
      */
-    findAllCrud(extraHttpRequestParams?: any): Observable<object>;
-
-    /**
-     * 
-     * 
-     * @param id 
-     */
-    findOneCrud(id: string, extraHttpRequestParams?: any): Observable<object>;
+    findAllUser(extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
      * 
      * @param id 
      */
-    removeCrud(id: string, extraHttpRequestParams?: any): Observable<object>;
+    findOneUser(id: string, extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
      * 
      * @param id 
-     * @param updateCrudDto 
      */
-    updateCrud(id: string, updateCrudDto: UpdateCrudDto, extraHttpRequestParams?: any): Observable<object>;
+    removeUser(id: string, extraHttpRequestParams?: any): Observable<object>;
+
+    /**
+     * 
+     * 
+     * @param id 
+     * @param updateUserDto 
+     */
+    updateUser(id: string, updateUserDto: UpdateUserDto, extraHttpRequestParams?: any): Observable<object>;
 
 }

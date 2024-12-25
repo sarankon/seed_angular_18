@@ -33,7 +33,7 @@ export class CrudComponent implements OnInit {
     loadCrud() {
         console.log('loadCrud')
         this.crudService.findAllCrud().subscribe({
-            next: (respose) => {
+            next: (respose:any) => {
                 console.log('Response:')
                 console.log(respose)
 
@@ -68,7 +68,7 @@ export class CrudComponent implements OnInit {
         }
 
         this.crudService.createCrud(crudDto).subscribe({
-            next: (response) => {
+            next: (response:any) => {
                 console.log('Response:')
                 console.log(response)
 
@@ -83,13 +83,12 @@ export class CrudComponent implements OnInit {
     update() {
         console.log('update()')
         const crudDto: UpdateCrudDto = {
-            id: this.selecteCrudId,
             topic: this.crudForm.controls.topic.value ?? '',
             detail: this.crudForm.controls.detail.value ?? '',
         }
 
         this.crudService.updateCrud(this.selecteCrudId.toString(), crudDto).subscribe({
-            next: (response) => {
+            next: (response:any) => {
                 console.log('Response:')
                 console.log(response)
 
@@ -113,7 +112,7 @@ export class CrudComponent implements OnInit {
         // })
 
         this.crudService.findOneCrud(id.toString()).subscribe({
-            next: (response) => {
+            next: (response:any) => {
                 console.log('Response:')
                 console.log(response)
 
@@ -132,7 +131,7 @@ export class CrudComponent implements OnInit {
         console.log(`onDelete(${id})`)
 
         this.crudService.removeCrud(id.toString()).subscribe({
-            next: (response) => {
+            next: (response:any) => {
                 console.log('Response:')
                 console.log(response)
 

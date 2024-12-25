@@ -1,0 +1,22 @@
+<div class="container mx-auto pt-8">
+    <div class="text-xl">Demo Upload</div>
+    <hr />
+    <div>Form Section</div>
+    <div class="mt-8 w-6/12">
+        <form class="flex w-6/12 flex-col gap-4 mb-4">
+            <div class="flex items-center justify-between pl-8">
+                <label for="file" class="mr-2">File</label>
+                <input type="file" id="file" name="file" class="inputText" formControlName="file" (change)="onFilePicked($event)"/>
+            </div>
+            <div class="flex justify-end">
+                <button type="button" class="btn" (click)="onFileSubmit()">Send</button>
+            </div>
+        </form>
+        <hr/>
+    </div>
+    <hr />
+    <div>List Section</div>
+    <div class="mt-8 w-6/12">
+        
+    </div>
+</div>

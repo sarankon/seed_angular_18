@@ -11,51 +11,48 @@ import { HttpHeaders }                                       from '@angular/comm
 
 import { Observable }                                        from 'rxjs';
 
-import { CreateCrudDto } from '../model/models';
-import { UpdateCrudDto } from '../model/models';
+import { CreateUserDto } from '../model/models';
+import { UserLoginDto } from '../model/models';
 
 
 import { Configuration }                                     from '../configuration';
 
 
 
-export interface CrudServiceInterface {
+export interface AuthServiceInterface {
     defaultHeaders: HttpHeaders;
     configuration: Configuration;
 
     /**
      * 
      * 
-     * @param createCrudDto 
      */
-    createCrud(createCrudDto: CreateCrudDto, extraHttpRequestParams?: any): Observable<object>;
+    getAdminAuth(extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
      * 
      */
-    findAllCrud(extraHttpRequestParams?: any): Observable<object>;
+    getProfileAuth(extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
      * 
-     * @param id 
+     * @param userLoginDto 
      */
-    findOneCrud(id: string, extraHttpRequestParams?: any): Observable<object>;
+    loginAuth(userLoginDto: UserLoginDto, extraHttpRequestParams?: any): Observable<{}>;
 
     /**
      * 
      * 
-     * @param id 
      */
-    removeCrud(id: string, extraHttpRequestParams?: any): Observable<object>;
+    logoutAuth(extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
      * 
-     * @param id 
-     * @param updateCrudDto 
+     * @param createUserDto 
      */
-    updateCrud(id: string, updateCrudDto: UpdateCrudDto, extraHttpRequestParams?: any): Observable<object>;
+    registerAuth(createUserDto: CreateUserDto, extraHttpRequestParams?: any): Observable<object>;
 
 }

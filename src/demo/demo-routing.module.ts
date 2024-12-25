@@ -17,7 +17,10 @@ const routes: Routes = [
   { path: 'faker', loadComponent: ()=> import('./faker/faker.component').then(c => c.FakerComponent) },
 
   // CRUD
-  { path: 'crud', loadComponent: ()=> import('./crud/crud.component').then(c => c.CrudComponent) }
+  { path: 'crud', loadComponent: ()=> import('./crud/crud.component').then(c => c.CrudComponent) },
+
+  // Upload
+  { path: 'upload', loadComponent: ()=> import('./upload/upload.component').then(c => c.UploadComponent) }
 ]
 
 

@@ -9,6 +9,7 @@ ng generate module demo --routing
 ``` bash
 ng generate component demo/dashboard --prefix demo
 ng generate component demo/crud --prefix demo
+ng generate component demo/upload --prefix demo
 ```
 
 # Create Component (Not Stanalone)

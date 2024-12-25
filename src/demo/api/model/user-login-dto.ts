@@ -9,9 +9,8 @@
  */
 
 
-export interface UpdateCrudDto { 
-    id?: number;
-    topic?: string;
-    detail?: string;
+export interface UserLoginDto { 
+    username: string;
+    password: string;
 }
 
