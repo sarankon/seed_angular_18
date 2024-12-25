@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
-import { CrudService } from '../api/api/crud.service'
-import { CreateCrudDto } from '../api/model/create-crud-dto'
-import { UpdateCrudDto } from '../api/model/update-crud-dto'
+import { CrudService } from '../../api/api/crud.service'
+import { CreateCrudDto } from '../../api/model/create-crud-dto'
+import { UpdateCrudDto } from '../../api/model/update-crud-dto'
 
 @Component({
     selector: 'demo-crud',

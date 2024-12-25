@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { UploadService } from '../api'
+import { UploadService } from '../../api'
 
 @Component({
     selector: 'demo-upload',
@@ -33,7 +33,7 @@ export class UploadComponent implements OnInit {
         console.log('onFileSubmit()')
         console.log("fileUpload", this.fileUpload)
 
-        this.uploadService.uploadFileUpload(this.fileUpload).subscribe(
+        this.uploadService.uploadFile(this.fileUpload).subscribe(
           {
             next: (response: any) => {
               console.log(response)

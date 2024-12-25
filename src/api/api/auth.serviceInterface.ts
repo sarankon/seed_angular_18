@@ -46,7 +46,7 @@ export interface AuthServiceInterface {
      * 
      * 
      */
-    logout(extraHttpRequestParams?: any): Observable<object>;
+    logout(extraHttpRequestParams?: any): Observable<string>;
 
     /**
      * 
@@ -54,5 +54,11 @@ export interface AuthServiceInterface {
      * @param createUserDto 
      */
     register(createUserDto: CreateUserDto, extraHttpRequestParams?: any): Observable<object>;
+
+    /**
+     * 
+     * 
+     */
+    rotateToken(extraHttpRequestParams?: any): Observable<string>;
 
 }
