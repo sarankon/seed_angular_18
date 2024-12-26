@@ -21,5 +21,9 @@ export class TokenService {
     getRefrechToken() {
       return localStorage.getItem('refresh_token')
     }
+
+    clearToken() {
+      localStorage.clear()
+    }
     
 }

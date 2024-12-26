@@ -38,9 +38,15 @@ export interface AuthServiceInterface {
     /**
      * 
      * 
+     */
+    isAuthenticated(extraHttpRequestParams?: any): Observable<object>;
+
+    /**
+     * 
+     * 
      * @param userLoginDto 
      */
-    login(userLoginDto: UserLoginDto, extraHttpRequestParams?: any): Observable<{}>;
+    login(userLoginDto: UserLoginDto, extraHttpRequestParams?: any): Observable<object>;
 
     /**
      * 
@@ -51,14 +57,14 @@ export interface AuthServiceInterface {
     /**
      * 
      * 
-     * @param createUserDto 
      */
-    register(createUserDto: CreateUserDto, extraHttpRequestParams?: any): Observable<object>;
+    refreshToken(extraHttpRequestParams?: any): Observable<string>;
 
     /**
      * 
      * 
+     * @param createUserDto 
      */
-    rotateToken(extraHttpRequestParams?: any): Observable<string>;
+    register(createUserDto: CreateUserDto, extraHttpRequestParams?: any): Observable<object>;
 
 }

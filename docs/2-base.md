@@ -7,4 +7,5 @@ ng generate component profile --prefix base
 ng generate component logout --prefix base
 
 ng generate interceptor intercepter/api
+ng generate guard guard/auth
 ```
