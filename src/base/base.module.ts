@@ -7,8 +7,9 @@ import { BaseRoutingModule } from './base-routing.module'
     providers: [],
     declarations: [],
     imports: [
-      CommonModule, 
-      BaseRoutingModule
+        CommonModule, 
+        BaseRoutingModule
     ],
+    exports: [],
 })
 export class BaseModule {}

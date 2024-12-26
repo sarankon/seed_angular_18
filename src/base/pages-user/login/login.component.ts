@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core'
-import { Router } from '@angular/router'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 
-import { AuthService } from '../../api/api/auth.service'
-import { UserLoginDto } from '../../api'
-import { TokenService } from '../auth/token.service'
+import { UserLoginDto } from '../../../api'
+import { BaseAuthService } from '../../services/base-auth.service'
 
 @Component({
     selector: 'base-login',
@@ -21,9 +19,7 @@ export class LoginComponent implements OnInit {
     })
 
     constructor(
-        private readonly router: Router,
-        private readonly authService: AuthService,
-        private readonly tokenService: TokenService,
+        private readonly baseAuthService: BaseAuthService
     ) {}
 
     ngOnInit(): void {}
@@ -35,15 +31,6 @@ export class LoginComponent implements OnInit {
             password: this.formLogin.controls['password'].value,
         }
         console.log('userLoginDto: ', userLoginDto)
-        this.authService.login(userLoginDto).subscribe({
-            next: (response: any) => {
-                console.log('response: ', response)
-                if (response['statusCode'] == 200 && response['data']) {
-                    this.tokenService.setAccessToken(response['data']['access_token'])
-                    this.tokenService.setRefreshToken(response['data']['refresh_token'])
-                    this.router.navigate(['base/profile'])
-                }
-            },
-        })
+        this.baseAuthService.login(userLoginDto)
     }
 }

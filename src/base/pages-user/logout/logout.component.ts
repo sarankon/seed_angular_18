@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core'
-import { TokenService } from '../auth/token.service'
-import { Router } from '@angular/router'
+import { BaseAuthService } from '../../services/base-auth.service'
 
 @Component({
     selector: 'base-logout',
@@ -11,12 +10,10 @@ import { Router } from '@angular/router'
 })
 export class LogoutComponent implements OnInit {
     constructor(
-        private readonly router: Router,
-        private readonly tokenService: TokenService,
+        private readonly baseAuthService: BaseAuthService
     ) {}
 
     ngOnInit(): void {
-        this.tokenService.clearToken()
-        this.router.navigate(['base'])
+        this.baseAuthService.logout()
     }
 }

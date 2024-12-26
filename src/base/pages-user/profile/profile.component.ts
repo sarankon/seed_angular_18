@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
-import { AuthService } from '../../api'
+import { AuthService } from '../../../api'
 
 @Component({
     selector: 'base-profile',

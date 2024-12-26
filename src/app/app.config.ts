@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core'
-import { provideHttpClient, withInterceptors } from '@angular/common/http'
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { provideRouter } from '@angular/router'
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async'
 import { routes } from './app.routes'
@@ -7,7 +7,7 @@ import { routes } from './app.routes'
 import { providePrimeNG } from 'primeng/config'
 import Aura from '@primeng/themes/aura'
 
-import { authInterceptor } from '../base/interceptor/auth.interceptor'
+import { BaseApiInterceptor } from '../base/interceptors/base-api.interceptor'
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -20,9 +20,14 @@ export const appConfig: ApplicationConfig = {
                 preset: Aura,
             },
         }),
-        // provideHttpClient()
+        // provideHttpClient(withInterceptors([functionInterceptor]),
         provideHttpClient(
-          withInterceptors([authInterceptor])
+            withInterceptorsFromDi()
         ),
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: BaseApiInterceptor,
+            multi: true,
+        },
     ],
 }
