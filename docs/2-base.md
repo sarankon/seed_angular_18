@@ -14,4 +14,6 @@ ng generate guard guards/base --functional false
 ng generate guard guards/role --functional false 
 ng generate guard guards/server --functional false 
 ? Which type of guard would you like to create? CanActivate, CanDeactivate, CanMatch
+
+npm install jwt-decode
 ```
