@@ -1,13 +1,14 @@
 <div class="flex h-screen w-full">
     <div class="flex h-full w-full flex-col bg-gray-100 lg:w-6/12">
-        <div>
-            <div class="hidden sm:block">SM:</div>
-            <div class="hidden md:block">MD:</div>
-            <div class="hidden lg:block">LG:</div>
-            <div class="hidden xl:block">XL:</div>
-            <div class="hidden 2xl:block">2XL:</div>
+        <div class="absolute z-50 bg-white text-xs text-red-600 top-2 left-2 rounded">
+            <div class="hidden sm:block">SM: 640px</div>
+            <div class="hidden md:block">MD: 768px</div>
+            <div class="hidden lg:block">LG: 1024px</div>
+            <div class="hidden xl:block">XL: 1280px</div>
+            <div class="hidden 2xl:block">2XL: 1536px</div>
         </div>
-        <div class="absolute m-4 text-xl">Seed Base</div>
+        <div class="absolute left-4 top-4 text-xl">Seed Base</div>
+        <div class="absolute bottom-4 left-4 cursor-pointer text-sm">Register Your Account</div>
         <div class="m-auto w-[320px]">
             <form [formGroup]="formLogin" (ngSubmit)="onSubmitForm()">
                 <div class="text-xl">Base Login</div>
@@ -50,6 +51,9 @@
         </div>
     </div>
     <div class="hidden h-full w-6/12 bg-gray-600 lg:flex">
-        <div class="m-auto text-6xl text-gray-100">SEED</div>
+        <div class="m-auto text-6xl text-gray-100">
+            <div>SEED</div>
+            <div class="text-center text-sm">LOGIN</div>
+        </div>
     </div>
 </div>
