@@ -8,7 +8,7 @@
             <div class="hidden 2xl:block">2XL: 1536px</div>
         </div>
         <div class="absolute left-4 top-4 text-xl">Seed Base</div>
-        <div class="absolute bottom-4 left-4 cursor-pointer text-sm">Register Your Account</div>
+        <div class="absolute bottom-4 left-4 cursor-pointer text-sm" (click)="onClickRegister()">Register Your Account</div>
         <div class="m-auto w-[320px]">
             <form [formGroup]="formLogin" (ngSubmit)="onSubmitForm()">
                 <div class="text-xl">Base Login</div>

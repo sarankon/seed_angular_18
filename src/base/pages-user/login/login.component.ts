@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms'
 
 import { UserLoginDto } from '../../../api'
@@ -19,6 +20,7 @@ export class LoginComponent implements OnInit {
     })
 
     constructor(
+        private readonly router: Router,
         private readonly baseAuthService: BaseAuthService
     ) {}
 
@@ -32,5 +34,9 @@ export class LoginComponent implements OnInit {
         }
         console.log('userLoginDto: ', userLoginDto)
         this.baseAuthService.login(userLoginDto)
+    }
+
+    onClickRegister() {
+        this.router.navigate(['/base/register'])
     }
 }

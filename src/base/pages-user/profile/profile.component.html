@@ -1,1 +1,52 @@
-<p>profile works!</p>
+<div class="flex h-screen w-full">
+    <div class="flex h-full w-full flex-col bg-gray-100 lg:w-6/12">
+        <div class="absolute z-50 bg-white text-xs text-red-600 top-2 left-2 rounded">
+            <div class="hidden sm:block">SM: 640px</div>
+            <div class="hidden md:block">MD: 768px</div>
+            <div class="hidden lg:block">LG: 1024px</div>
+            <div class="hidden xl:block">XL: 1280px</div>
+            <div class="hidden 2xl:block">2XL: 1536px</div>
+        </div>
+        <div class="absolute left-4 top-4 text-xl">Seed Base</div>
+        <div class="absolute bottom-4 left-4 cursor-pointer text-sm">Your Account</div>
+        <div class="m-auto w-[320px]">
+            <form [formGroup]="formProfile">
+                <div class="text-xl">Base Profile</div>
+                <div class="relative mt-4">
+                    <label for="username" class="absolute ml-4 mt-2 rounded bg-white px-2 text-xs">Username: </label>
+                    <input
+                        type="text"
+                        id="username"
+                        name="username"
+                        placeholder="Username"
+                        class="mt-4 w-full rounded border border-gray-300 px-4 py-2"
+                        [maxlength]="inputMaxLength"
+                        formControlName="username"
+                    />
+                </div>
+                <div class="relative mt-4">
+                    <label for="password" class="absolute ml-4 mt-2 rounded bg-white px-2 text-xs">Password: </label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Password"
+                        class="mt-4 w-full rounded border border-gray-300 px-4 py-2"
+                        [maxlength]="inputMaxLength"
+                        formControlName="password"
+                    />
+                </div>
+                <div class="mt-4">
+                    <button type="submit" class="w-full rounded border border-gray-300 bg-gray-300 py-2 text-center text-gray-800 hover:bg-gray-400">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="hidden h-full w-6/12 bg-gray-600 lg:flex">
+        <div class="m-auto text-6xl text-gray-100">
+            <div>SEED</div>
+            <div class="text-center text-sm">PROFILE</div>
+        </div>
+    </div>
+</div>
+
