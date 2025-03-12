@@ -6,8 +6,6 @@ ng generate component login --prefix base
 ng generate component profile --prefix base
 ng generate component logout --prefix base
 
-
-
 ng generate service services/base-auth 
 ng generate interceptor interceptors/base-api --functional false
 ng generate guard guards/base --functional false 

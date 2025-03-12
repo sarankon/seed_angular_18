@@ -9,7 +9,6 @@ ng generate environments
 [https://sass-lang.com/documentation/syntax#scss]
 - Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? ___No___
 
-
 ## Matrial Symbols
 Reference: https://github.com/marella/material-symbols
 Reference: https://marella.me/material-symbols/demo
@@ -56,7 +55,7 @@ Reference: https://v18.primeng.org/icons
 
 ``` bash
 npm install primeng @primeng/themes
-npm i tailwindcss-primeui
+npm install tailwindcss-primeui
 npm install primeicons
 ```
 
